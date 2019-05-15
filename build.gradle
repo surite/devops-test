@@ -8,6 +8,7 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
+apply plugin: "jacoco"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -28,3 +29,11 @@ dependencies {
     compile group: 'log4j', name: 'log4j', version:'1.2.12'
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+check.dependsOn jacocoTestReport
