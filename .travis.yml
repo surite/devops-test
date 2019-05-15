@@ -1,2 +1,8 @@
 language: java
-
+addons:
+  sonarcloud:
+    organization: "surite-github"
+    token:
+      secure: $SONAR_TOKEN
+script:
+  - sonar-scanner
