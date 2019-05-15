@@ -5,4 +5,5 @@ addons:
     token:
       secure: $SONAR_TOKEN
 script:
+  - junit
   - sonar-scanner
