@@ -4,7 +4,7 @@
 import org.apache.log4j.Logger;
 
 public class Calc {
-	final static Logger logger = Logger.getLogger(Calc.class);
+    static final Logger logger = Logger.getLogger(Calc.class);
     public boolean returnTrue() {
     	logger.info("This method will return true.");
         return true;
