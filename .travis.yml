@@ -10,6 +10,6 @@ job:
   include:
     - stage: build & unit test
       script: gradle build
-      script: ls
+    - script: ls
     - stage: code scan
       script: sonar-scanner
