@@ -6,8 +6,9 @@ addons:
       secure: $SONAR_TOKEN
 jdk:
   - oraclejdk8
-script:
-  - gradle build
-  - ls ./
-  - gradle sonarqube
-  - ./gradlew sonarqube
+jobs:
+  include:
+    - stage: unit test
+      script: gradle build
+    - stage: code scan
+      script: gradle sonarqube
