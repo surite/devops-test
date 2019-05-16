@@ -9,4 +9,5 @@ jdk:
 script:
   - gradle build
   - ls ./
-  - gradlew sonarqube
+  - gradle sonarqube
+  - ./gradlew sonarqube
