@@ -6,7 +6,10 @@ addons:
       secure: $SONAR_TOKEN
 jdk:
   - oraclejdk8
-script:
-  - gradle build
-  - ls
-  - sonar-scanner
+job:
+  include:
+    - stage: build & unit test
+      script: gradle build
+      script: ls
+    - stage: code scan
+      script: sonar-scanner
