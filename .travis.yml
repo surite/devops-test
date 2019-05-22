@@ -11,5 +11,5 @@ jobs:
     - stage: unit test
       script: gradle build
     - stage: code scan
-      if: $TRAVIS_PULL_REQUEST = false
-      script: gradle sonarqube
+      script: 
+        - if [  "$TRAVIS_PULL_REQUEST" == "false" ]; then gradle sonarqube; fi
