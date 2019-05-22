@@ -3,7 +3,7 @@ addons:
   sonarcloud:
     organization: "surite-github"
     token:
-      secure: d6647bbc9c567250416c520125003dd52408cbf7
+      secure: $SONAR_TOKEN
 jdk:
   - oraclejdk8
 jobs:
@@ -11,4 +11,5 @@ jobs:
     - stage: unit test
       script: gradle build
     - stage: code scan
+      if: $TRAVIS_PULL_REQUEST = false
       script: gradle sonarqube
