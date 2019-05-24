@@ -34,8 +34,8 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "devops ci"
-        property "sonar.projectKey", "my:devops"
+        property "sonar.projectName", "rite0 fork"
+        property "sonar.projectKey", "rite0:devopsfork"
     }
 }
 
