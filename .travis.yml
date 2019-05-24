@@ -1,7 +1,7 @@
 language: java
 addons:
   sonarcloud:
-    organization: "surite-github"
+    organization: $SONAR_ORG
     token:
       secure: $SONAR_TOKEN
 jdk:
