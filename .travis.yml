@@ -3,7 +3,7 @@ addons:
   sonarcloud:
     organization: "surite-github"
     token:
-      secure: $SONAR_TOKEN
+      secure: 4a810aa1792d600f97ef232a0ec82428b7b4507f
 jdk:
   - oraclejdk8
 jobs:
