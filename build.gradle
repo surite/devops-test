@@ -37,7 +37,6 @@ sonarqube {
         property "sonar.projectName", sonarprojectname
         property "sonar.projectKey", sonarprojectkey
         property "sonar.projectVersion", "1.0"
-        property "sonar.sources", "."
     }
 }
 
