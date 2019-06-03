@@ -34,8 +34,9 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "rite0 fork"
-        property "sonar.projectKey", "rite0:devopsfork"
+        property "sonar.projectName", sonarprojectname
+        property "sonar.projectKey", sonarprojectkey
+        property "sonar.projectVersion", "1.0"
     }
 }
 
