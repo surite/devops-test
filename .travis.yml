@@ -11,5 +11,4 @@ jobs:
     - stage: unit test
       script: gradle build
     - stage: code scan
-      script: 
-        - if [  "$TRAVIS_PULL_REQUEST" == "false" ]; then gradle sonarqube; fi
+      script: gradle sonarqube -Psonarprojectkey=$SONAR_PROJECT_KEY -Psonarprojectname=$SONAR_PROJECT_NAME
