@@ -9,6 +9,4 @@ jdk:
 jobs:
   include:
     - stage: unit test
-      script: gradle build
-    - stage: code scan
-      script: gradle sonarqube -Psonarprojectkey=$SONAR_PROJECT_KEY -Psonarprojectname=$SONAR_PROJECT_NAME
+      script: sonar-scanner
