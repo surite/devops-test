@@ -34,17 +34,9 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.projectName", sonarprojectname
-        property "sonar.projectKey", sonarprojectkey
-        property "sonar.projectVersion", "1.0"
+        property "sonar.projectName", sonarProjectName
+        property "sonar.projectKey", sonarProjectKey
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.organization", sonarOrg
     }
 }
-
-// jacocoTestReport {
-//     reports {
-//         xml.enabled = true
-//         html.enabled = true
-//     }
-// }
-
-// check.dependsOn jacocoTestReport
