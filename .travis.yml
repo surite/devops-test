@@ -8,7 +8,9 @@ jdk:
   - openjdk8
 jobs:
   include:
-    - stage: sonar
-      script:
-      - gradle build
-      - sonar-scanner
+     - stage: unit test
+       script:
+       - gradle build
+     - stage: code scan
+       script:
+       - gradle sonarqube -PsonarProjectKey=$SONAR_PROJECT_KEY -PsonarProjectName=$SONAR_PROJECT_NAME -PsonarOrg=$SONAR_ORG
