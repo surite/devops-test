@@ -1,3 +1,4 @@
+
 language: java
 addons:
   sonarcloud:
@@ -14,3 +15,4 @@ jobs:
      - stage: code scan
        script:
        - gradle sonarqube -PsonarProjectKey=$SONAR_PROJECT_KEY -PsonarProjectName=$SONAR_PROJECT_NAME -PsonarOrg=$SONAR_ORG
+       - chmod 777 checkSonarQualityGateByAPI && ./checkSonarQualityGateByAPI -ProjectKeys=$SONAR_PROJECT_KEY -BranchName=$TRAVIS_BRANCH
