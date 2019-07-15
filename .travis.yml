@@ -14,5 +14,5 @@ jobs:
        - gradle build
      - stage: code scan
        script:
-       - gradle sonarqube -PsonarProjectKey=$SONAR_PROJECT_KEY -PsonarProjectName=$SONAR_PROJECT_NAME -PsonarOrg=$SONAR_ORG
+       - gradle sonarqube -PsonarProjectKey=$SONAR_PROJECT_KEY:$TRAVIS_BRANCH -PsonarProjectName=$SONAR_PROJECT_NAME:$TRAVIS_BRANCH -PsonarOrg=$SONAR_ORG
        - chmod 777 checkSonarQualityGateByAPI && ./checkSonarQualityGateByAPI -ProjectKeys=$SONAR_PROJECT_KEY -BranchName=$TRAVIS_BRANCH
