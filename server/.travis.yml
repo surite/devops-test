@@ -1,0 +1,14 @@
+language: java
+addons:
+  sonarcloud:
+    organization: "surite-github"
+    token:
+      secure: $SONAR_TOKEN
+jdk:
+  - oraclejdk8
+jobs:
+  include:
+    - stage: unit test
+      script: gradle build
+    - stage: code scan
+      script: gradle sonarqube
